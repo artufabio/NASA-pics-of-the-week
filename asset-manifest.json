@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/NASA-pics-of-the-week/static/css/main.9583f9e1.chunk.css",
+    "main.js": "/NASA-pics-of-the-week/static/js/main.f55e25bf.chunk.js",
+    "main.js.map": "/NASA-pics-of-the-week/static/js/main.f55e25bf.chunk.js.map",
+    "runtime-main.js": "/NASA-pics-of-the-week/static/js/runtime-main.6c24facc.js",
+    "runtime-main.js.map": "/NASA-pics-of-the-week/static/js/runtime-main.6c24facc.js.map",
+    "static/css/2.371d4030.chunk.css": "/NASA-pics-of-the-week/static/css/2.371d4030.chunk.css",
+    "static/js/2.446f72bd.chunk.js": "/NASA-pics-of-the-week/static/js/2.446f72bd.chunk.js",
+    "static/js/2.446f72bd.chunk.js.map": "/NASA-pics-of-the-week/static/js/2.446f72bd.chunk.js.map",
+    "static/js/3.8c01b2d0.chunk.js": "/NASA-pics-of-the-week/static/js/3.8c01b2d0.chunk.js",
+    "static/js/3.8c01b2d0.chunk.js.map": "/NASA-pics-of-the-week/static/js/3.8c01b2d0.chunk.js.map",
+    "index.html": "/NASA-pics-of-the-week/index.html",
+    "static/css/2.371d4030.chunk.css.map": "/NASA-pics-of-the-week/static/css/2.371d4030.chunk.css.map",
+    "static/css/main.9583f9e1.chunk.css.map": "/NASA-pics-of-the-week/static/css/main.9583f9e1.chunk.css.map",
+    "static/js/2.446f72bd.chunk.js.LICENSE.txt": "/NASA-pics-of-the-week/static/js/2.446f72bd.chunk.js.LICENSE.txt",
+    "static/media/rocket1.372c3bc3.svg": "/NASA-pics-of-the-week/static/media/rocket1.372c3bc3.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6c24facc.js",
+    "static/css/2.371d4030.chunk.css",
+    "static/js/2.446f72bd.chunk.js",
+    "static/css/main.9583f9e1.chunk.css",
+    "static/js/main.f55e25bf.chunk.js"
+  ]
+}
