@@ -2,35 +2,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 
 .btnContainer {
-    width: 90%;
-    margin-top: 20px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+  width: 90%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-button{
+button {
   background: rgba(236, 198, 116, 0.2);
   width: 250px;
   height: 50px;
   padding: 0 20px;
   text-align: center;
   border-style: none;
+  outline: none;
   border-bottom: 1px solid black;
-  border-top: none;
-  border-left: none;
-  border-right: none;
   cursor: pointer;
   font-family: 'Open Sans', sans-serif;
+  border-radius: 5px 5px 0 0;
   transition: 0.25s;
 }
-
-/* button:hover {
-  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
-  transform: translateY(-0.25em);
-} */
 
 .slide:hover {
   box-shadow: inset 0 -50px 0 0 black;
   color: rgb(236, 198, 116);;
+}
+
+/* Large Smartphone (Vertical) */
+@media screen and (max-width: 800px) {
+  .btnContainer {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .slide{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+  }
+
+  .slide:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+    color: black;
+  }
 }
