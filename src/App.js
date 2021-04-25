@@ -3,6 +3,7 @@ import {ImageContainer} from './components/imageContainer/ImageContainer';
 import {Scroll} from './components/scroll/Scroll';
 import {ReactComponent as Rocket} from './rocket1.svg';
 import {ErrorBoundary} from './components/errorBoundary/ErrorBoundary';
+import {ActiveButton} from './components/activeButton/ActiveButton';
 import './App.css';
 
 
@@ -18,21 +19,29 @@ class App extends Component {
         super();
 
         this.state = {
-            pictures: []
+            pictures: [],
+            textButton: 'most recent'
         }
     }
 
     // I request the last 7 pictures of the day from Nasa API
     componentDidMount(){
-        // fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=100&page=8&api_key=DEMO_KEY')
         fetch(`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&start_date=${date}`)
         .then(response =>response.json())
         .then(photos => this.setState({ pictures: photos}))
         .catch(error => console.log(error))
     }
 
+    displayPictures = () => {
+        this.setState({pictures: this.state.pictures.reverse()});
+        this.setState({textButton: (this.state.textButton === 'most recent')? 'oldest' : 'most recent'});
+    }
+
     render() {
-        return ( this.state.pictures.length === 0 ) ?   //ternary operator
+
+        const { pictures, textButton } = this.state;
+
+        return ( pictures.length === 0 ) ?   //ternary operator
             (
                 <div className="loader">
                     <Rocket />
@@ -45,8 +54,11 @@ class App extends Component {
                         <h1>NASA Pics of the Week</h1>
                     </div>
                     <Scroll>
+                        <ActiveButton handleClick={this.displayPictures}>
+                            {`Display ${textButton} pictures at the top`}
+                        </ActiveButton>
                         <ErrorBoundary>
-                            <ImageContainer  pictures={this.state.pictures} />
+                            <ImageContainer  pictures={pictures} />
                         </ErrorBoundary>
                     </Scroll>
                 </div>
